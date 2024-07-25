@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .summary {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .summary h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Summary</h1>
+        <div class="summary">
+            <h2>Total Order Count</h2>
+            <p>{{ order_count.count }}</p>
+        </div>
+        <div class="summary">
+            <h2>Total Quantity Sum</h2>
+            <p>{{ product_summ.sum }}</p>
+        </div>
+        <div class="summary">
+            <h2>Daily Quantity Sum (25th July 2024)</h2>
+            <p>{{ daily_sum.sum }}</p>
+        </div>
+        <div class="summary">
+            <h2>Sum for Last 10 Days</h2>
+            <p>{{ ten_days_sum.sum }}</p>
+        </div>
+        <div class="summary">
+            <h2>Customer Orders Quantity Sum</h2>
+            <p>{{ customer_orders.sum }}</p>
+        </div>
+    </div>
+</body>
+</html>
